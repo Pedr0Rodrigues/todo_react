@@ -65,6 +65,23 @@ input[type="text"]:focus {
   color: #333;
 }
 
+input[type="search"] {
+  margin-top: 5px;
+  font-size: 18px;
+  line-height: 18px;
+  height: 28px; 
+  width: 343px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+input[type="search"]:focus {
+  color: #333;
+}
+
 /* New Task */
 label[for="new-task"] {
   display: block;
