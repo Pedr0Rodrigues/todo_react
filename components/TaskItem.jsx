@@ -15,6 +15,12 @@ const TaskItem = ({ task, onUpdateTask, onDeleteTask }) => {
     }
   };
 
+  const handleEditKeyUp = (e) => {
+    if (e.key === "Enter" && editMode) {
+      handleEditClick();
+    }
+  };
+
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
   };
@@ -39,7 +45,10 @@ const TaskItem = ({ task, onUpdateTask, onDeleteTask }) => {
       {!editMode ? (
         <label>{task.title}</label>
       ) : (
-        <input type="text" value={title} onChange={handleTitleChange} />
+        <input type="text" 
+        value={title} 
+        onChange={handleTitleChange} 
+        onKeyUp={handleEditKeyUp}/>
       )}
 
       <button className="edit" onClick={handleEditClick}>
